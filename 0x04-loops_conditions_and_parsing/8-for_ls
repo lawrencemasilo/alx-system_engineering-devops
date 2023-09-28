@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# a script that displays the contents in the current directory in a list format
+for i in *;
+do
+	if [[ "$i" != .* ]] && [ -f "$i" ];
+	then
+		cmd=$(echo "$i" | cut -d'-' -f2-)
+		echo "$cmd"
+	fi
+done
