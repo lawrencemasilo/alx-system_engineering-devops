@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 # a script that displays To infinity and beyond indefinitely
 i=0
+
+sigterm()
+{
+	echo "I am invincible!!!"
+}
 while [ $i -lt 10 ];
 do
+	trap "sigterm" SIGTERM
 	echo "To infinity and beyond"
 	sleep 2
-	trap 'I am invincible!!!' SIGTERM
 done
