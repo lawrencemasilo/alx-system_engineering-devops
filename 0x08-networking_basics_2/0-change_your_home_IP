@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # a script that configures an Ubuntu server
 cp /etc/hosts ~/hosts.new
+cp -f /etc/hosts ~/hosts.new
