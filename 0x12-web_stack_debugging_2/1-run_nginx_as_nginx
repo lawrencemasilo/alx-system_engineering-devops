@@ -4,4 +4,4 @@
 sudo service nginx stop
 sed -i 's#^listen\s*80;#listen 8080;#g' /etc/nginx/nginx.conf
 sed -i '/^user/s/.*/user nginx;/' /etc/nginx/nginx.conf
-sudo service nginx start
+service nginx start
