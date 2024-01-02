@@ -30,7 +30,7 @@ def employee_todo_progress():
                     "completed": todo.get("completed"),
                     "username": name
                     }
-            exports[employee_id] = tasks
+        exports[employee_id] = tasks
 
     with open("todo_all_employees.json", "w") as json_file:
         json.dump(exports, json_file, indent=4)
