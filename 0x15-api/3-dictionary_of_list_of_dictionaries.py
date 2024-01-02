@@ -21,7 +21,6 @@ def employee_todo_progress():
 
         todos_response = requests.get(f"{todos}?userId={employee_id}")
 
-        todos_response = requests.get(todos)
         todos_data = todos_response.json()
 
         exports[employee_id] = []
