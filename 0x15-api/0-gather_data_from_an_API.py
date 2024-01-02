@@ -23,5 +23,6 @@ def employee_todo_progress(employee_id):
     for task in tasks:
         print(f"\t {task['title']}")
 
+
 if __name__ == "__main__":
     employee_todo_progress(int(sys.argv[1]))
