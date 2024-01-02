@@ -24,13 +24,14 @@ def employee_todo_progress():
         todos_response = requests.get(todos)
         todos_data = todos_response.json()
 
+        exports[employee_id] = []
         for todo in todos_data:
             tasks = {
                     "task": todo.get("title"),
                     "completed": todo.get("completed"),
                     "username": name
                     }
-        exports[employee_id] = tasks
+            exports[employee_id].append(tasks)
 
     with open("todo_all_employees.json", "w") as json_file:
         json.dump(exports, json_file, indent=4)
