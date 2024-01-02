@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-#This module uses a REST api for Todo list progress
+"""This module uses a REST api for Todo list progress"""
 import requests
 import sys
 
-if __name__ == "__main__":
-    employee_id = int(sys.argv[1])
 
+def employee_todo_progress(employee_id):
+    """fetches the data"""
     main_url = f"""https://jsonplaceholder.typicode.com/users/{employee_id}"""
     todos = f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
 
@@ -22,3 +22,7 @@ if __name__ == "__main__":
 
     for task in tasks:
         print(f"\t{task['title']}")
+
+
+if __name__ == "__main__":
+    employee_todo_progress(int(sys.argv[1]))
