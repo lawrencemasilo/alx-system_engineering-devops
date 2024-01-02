@@ -21,9 +21,7 @@ def employee_todo_progress(employee_id):
     print(f"Employee {name} is done with tasks({len(tasks)}/{total_tasks}):")
 
     for task in tasks:
-        """print(f"\t{task['title']}")"""
-        print(f"     {task['title']}")
-
+        print(f"\t{task['title']}")
 
 if __name__ == "__main__":
     employee_todo_progress(int(sys.argv[1]))
