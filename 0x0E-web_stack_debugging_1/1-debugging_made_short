@@ -2,5 +2,5 @@
 #Debugs the Ubuntu container’s Nginx installation from listening on port 80
 
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
+sudo service nginx start
 kill "$(pgrep 'nginx' | head -1)"
