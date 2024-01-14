@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Debugs the Ubuntu container’s Nginx installation from listening on port 80
 
-sed -i '/listen 80 default_server;/s/^#//g' /etc/nginx/sites-available/default
-
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
